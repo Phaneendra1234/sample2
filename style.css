@@ -1,0 +1,45 @@
+#parent{
+    background-color: palegreen;
+    display: grid;
+    /* height: 1000px; */
+    grid-template-columns: 1fr 1fr 1fr;    /* grid-template-rows: 1fr 2fr 3fr; */
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "header header header"
+    "main main side"
+    "card card card"
+    "footer footer footer";
+}
+.box{
+    width: 150px;
+    height: 150px;
+}
+.box:nth-child(odd){
+    background-color: blueviolet;
+}
+.box:nth-child(even){
+    background-color: coral;
+}
+
+#nav{
+    background-color: aqua;
+    grid-area:header;
+}
+#main{
+    background-color: blueviolet;
+    color: white;
+    grid-area: main;
+}
+#aside{
+    background-color: coral;
+    grid-area:side;
+}
+#cards{
+    background-color: rgb(213, 124, 255);
+    grid-area: card;
+}
+#footer{
+    background-color: teal;
+    color: white;
+    grid-area: footer;
+}
